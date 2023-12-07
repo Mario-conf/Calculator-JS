@@ -2,7 +2,7 @@
 
 ---
 
-![Calculadora Científica](/src/imagen.png)
+![Calculadora Científica](/src/image.png)
 
 ### Descripción
 
