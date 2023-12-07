@@ -32,6 +32,7 @@ function toggleTheme() {
   darkTheme = !darkTheme;
   updateTheme();
 }
+
 function updateTheme() {
   const body = document.body;
   const calculator = document.querySelector('.calculator');
@@ -50,16 +51,15 @@ function updateTheme() {
     });
   } else {
     body.style.backgroundColor = '#f8f9fa';
-    calculator.style.backgroundColor = '#000000'; // Fondo negro absoluto en modo claro
+    calculator.style.backgroundColor = '#ffffff'; 
     calculator.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
     input.style.border = '1px solid #ccc';
 
     buttons.forEach(button => {
-      button.style.backgroundColor = 'rgb(123, 0, 180)';
+      button.style.backgroundColor = 'rgb(40, 0, 58)';
       button.style.color = '#fff';
     });
   }
 }
 
-// Aplicar el tema inicial
 updateTheme();
