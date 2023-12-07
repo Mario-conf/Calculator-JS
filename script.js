@@ -51,7 +51,7 @@ function updateTheme() {
     });
   } else {
     body.style.backgroundColor = '#f8f9fa';
-    calculator.style.backgroundColor = '#ffffff'; 
+    calculator.style.backgroundColor = '#ffffff'; // Cambiado a blanco en modo claro
     calculator.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
     input.style.border = '1px solid #ccc';
 
@@ -60,6 +60,8 @@ function updateTheme() {
       button.style.color = '#fff';
     });
   }
+
+  input.style.color = darkTheme ? '#fff' : '#000'; // Agregado para el color de texto en modo oscuro y claro
 }
 
 updateTheme();
