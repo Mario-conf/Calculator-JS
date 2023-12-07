@@ -43,3 +43,54 @@ button {
 button:hover {
   background-color: rgb(110, 0, 161);
 }
+/* ... Otros estilos ... */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #000; /* Agregado para el color de texto en modo claro */
+}
+
+.calculator {
+  max-width: 300px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  color: #000; /* Agregado para el color de texto en modo claro */
+}
+
+input {
+  width: calc(100% - 20px);
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  color: #000; /* Agregado para el color de texto en modo claro */
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  margin: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(110, 0, 161);
+}
+
+/* ... Otros estilos ... */
