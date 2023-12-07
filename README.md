@@ -33,7 +33,7 @@ Si deseas contribuir al desarrollo de la calculadora, sigue estos pasos:
 5. Sube tus cambios: `git push origin tu-rama`
 6. Abre un Pull Request en GitHub.
 
-¡Agradecemos tus contribuciones! Además, sígueme en mis redes sociales para apoyar este proyecto y otros a través de este enlace: [(https://linktr.ee/mario.conf)](https://linktr.ee/mario.conf)
+¡Agradecemos tus contribuciones! Además, sígueme en mis redes sociales para apoyar este proyecto y otros a través de este enlace: [https://linktr.ee/mario.conf]
 
 ---
 
@@ -72,4 +72,4 @@ If you want to contribute to the development of the calculator, follow these ste
 5. Push your changes: `git push origin your-branch`
 6. Open a Pull Request on GitHub.
 
-We welcome your contributions! Also, follow me on my social media to support this project and others through this link: (https://linktr.ee/mario.conf)](https://linktr.ee/mario.conf)
+We welcome your contributions! Also, follow me on my social media to support this project and others through this link:  [https://linktr.ee/mario.conf]
