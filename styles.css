@@ -83,6 +83,10 @@ button:hover {
         margin: 20px;
     
     }
+    .calculator input{
+        width: 280px;
+        display: block;
+    }
     .calculator::after {
         content: "\A"; 
         white-space: pre; 
@@ -93,12 +97,13 @@ button:hover {
         margin: 20px;
         width: 100%;
     }
-     input {
+    input {
         width: 300px;
         display: block;
     }
     
-    
+}
+
 }
 
 }
