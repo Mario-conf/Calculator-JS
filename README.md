@@ -16,11 +16,29 @@ Esta es una calculadora científica implementada en HTML, CSS y JavaScript. Ofre
 4. Presiona el botón "=" para calcular el resultado.
 5. El botón "C" borra la pantalla y permite ingresar una nueva expresión.
 
-### Funcionalidades
+### Funcionalidades Basicas
 
 - Operaciones básicas: suma, resta, multiplicación, división.
 - Funciones científicas: raíz cuadrada, seno, coseno.
 - Botón de cambio de tema para ajustar el modo claro y oscuro.
+
+### Funcionalidades Agregadas
+
+- **Intereses:** Calcula intereses para realizar cálculos financieros.
+  
+- **Promedio:** Obtiene el promedio de conjuntos de números.
+
+- **Áreas y Volúmenes:** Calcula áreas y volúmenes de figuras geométricas.
+
+- **Proporciones:** Resuelve proporciones de manera rápida.
+
+- **Ecuaciones Lineales:** Resuelve ecuaciones lineales.
+
+- **Ecuación de Segundo Grado:** Calcula las raíces de ecuaciones de segundo grado (ax² + bx + c = 0).
+
+- **Sistema de Ecuaciones Lineales:** Encuentra soluciones para sistemas de dos ecuaciones lineales (ax + by = c, dx + ey = f).
+
+- Porcentaje de Cambio: Calcula porcentajes de cambio entre dos valores.
 
 ### Cómo Contribuir
 
@@ -54,12 +72,30 @@ This is a scientific calculator implemented in HTML, CSS, and JavaScript. It pro
 3. You can use scientific functions like square root, sine, and cosine.
 4. Press the "=" button to calculate the result.
 5. The "C" button clears the screen and allows you to enter a new expression.
-
-### Features
+### Basic Features
 
 - Basic operations: addition, subtraction, multiplication, division.
 - Scientific functions: square root, sine, cosine.
-- Theme toggle button to switch between light and dark mode.
+- Theme switch button for adjusting light and dark mode.
+
+### Additional Features
+
+- **Interests:** Calculates interests for financial calculations.
+  
+- **Average:** Computes the average of number sets.
+
+- **Areas and Volumes:** Calculates areas and volumes of geometric figures.
+
+- **Proportions:** Quickly solves proportional calculations.
+
+- **Linear Equations:** Solves linear equations.
+
+- **Quadratic Equation:** Computes roots of quadratic equations (ax² + bx + c = 0).
+
+- **System of Linear Equations:** Finds solutions for systems of two linear equations (ax + by = c, dx + ey = f).
+
+- Percentage Change: Calculates percentage changes between two values.
+
 
 ### How to Contribute
 
