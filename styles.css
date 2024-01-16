@@ -93,9 +93,11 @@ button:hover {
         margin: 20px;
         width: 100%;
     }
-        input {
-        width: 320px;
+     input {
+        width: 300px;
+        display: block;
     }
+    
     
 }
 
