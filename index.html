@@ -1,45 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css">
-  <title>Scientific Calculator</title>
-</head>
-<body>
-  <div class="calculator">
-    <input type="text" id="display" disabled>
-    <br>
-    <button onclick="clearDisplay()">C</button>
-    <button onclick="appendToDisplay('(')">(</button>
-    <button onclick="appendToDisplay(')')">)</button>
-    <button onclick="appendToDisplay('^')">^</button>
-    <br>
-    <button onclick="calculateSquareRoot()">√</button>
-    <button onclick="calculateSin()">sin</button>
-    <button onclick="calculateCos()">cos</button>
-    <button onclick="toggleTheme()">🌓</button>
-    <br>
-    <button onclick="appendToDisplay('7')">7</button>
-    <button onclick="appendToDisplay('8')">8</button>
-    <button onclick="appendToDisplay('9')">9</button>
-    <button onclick="appendToDisplay('/')">/</button>
-    <br>
-    <button onclick="appendToDisplay('4')">4</button>
-    <button onclick="appendToDisplay('5')">5</button>
-    <button onclick="appendToDisplay('6')">6</button>
-    <button onclick="appendToDisplay('*')">*</button>
-    <br>
-    <button onclick="appendToDisplay('1')">1</button>
-    <button onclick="appendToDisplay('2')">2</button>
-    <button onclick="appendToDisplay('3')">3</button>
-    <button onclick="appendToDisplay('-')">-</button>
-    <br>
-    <button onclick="appendToDisplay('0')">0</button>
-    <button onclick="appendToDisplay('.')">.</button>
-    <button onclick="calculateResult()">=</button>
-    <button onclick="appendToDisplay('+')">+</button>
-  </div>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Mario.conf" />
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📟​</text></svg>"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Scientific Calculator</title>
+      </head>
+      <body>
+        <div class="calculator">
+          <input type="text" id="display" disabled>
+          <br>
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendToDisplay('(')">(</button>
+          <button onclick="appendToDisplay(')')">)</button>
+          <button onclick="appendToDisplay('^')">^</button>
+          <br>
+          <button onclick="calculateSquareRoot()">√</button>
+          <button onclick="calculateSin()">sin</button>
+          <button onclick="calculateCos()">cos</button>
+          <button onclick="toggleTheme()">🌓</button>
+          <br>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="appendToDisplay('/')">/</button>
+          <br>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('*')">*</button>
+          <br>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('-')">-</button>
+          <br>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculateResult()">=</button>
+          <button onclick="appendToDisplay('+')">+</button>
+        </div>
+<div id="extra">
+    <!-- Interés Simple y Compuesto -->
+    <form id="calcularInteresForm" onsubmit="manejarFormularioInteres(); return false;">
+      <label for="monto">Monto inicial:</label>
+      <input type="text" id="monto" placeholder="Ingrese el monto" required>
+      <label for="tasa">Tasa de interés anual:</label>
+      <input type="text" id="tasa" placeholder="Ingrese la tasa de interés" required>
+      <label for="tiempo">Tiempo (en años):</label>
+      <input type="text" id="tiempo" placeholder="Ingrese el tiempo" required>
+      <button type="submit">Calcular Interés</button>
+  </form>
+    <hr><br>
+    <!-- Promedio -->
+    <form id="calcularPromedioForm" onsubmit="iniciarCalculadoraPromedio(); return false;">
+      <label for="numeros">Ingrese números (separados por coma):</label>
+      <input type="text" id="numeros" name="numeros" placeholder="Ej. 10, 20, 30" required>
+      <button type="submit">Calcular Promedio</button>
+  </form>
+    <hr><br>
+    <!-- Áreas y Volúmenes -->
+    <form id="calcularAreaVolumenForm" onsubmit="calcularAreaVolumen(); return false;">
+      <label for="tipoFigura">Seleccione la figura:</label>
+      <select id="tipoFigura" name="tipoFigura" required onchange="mostrarDimensiones()">
+          <option value="triangulo">Triángulo</option>
+          <option value="cuadrado">Cuadrado</option>
+          <option value="circulo">Círculo</option>
+      </select> 
+      <div id="dimensionesFigura"></div>
+      <button type="submit">Calcular Área/Volumen</button>
+  </form>
+  <hr><br>
+    <!-- Proporciones -->
+    <form id="proporcionForm" onsubmit="resolverProporcion();">
+      <label for="parte1">Parte 1:</label>
+      <input type="text" name="parte1" placeholder="Ingrese la parte 1" required>
+      <label for="parte2">Parte 2:</label>
+      <input type="text" name="parte2" placeholder="Ingrese la parte 2" required>
+      <label for="parte3">Parte 3:</label>
+      <input type="text" name="parte3" placeholder="Ingrese la parte 3" required>
+      <label for="parte4">Parte 4:</label>
+      <input type="text" name="parte4" placeholder="Ingrese la parte 4" required>
+      <button type="submit">Resolver Proporción</button>
+  </form>
+    <hr><br>
+    <!-- Ecuaciones Lineales -->
+    <form id="ecuacionForm" onsubmit="return resolverEcuacion()">
+      <label for="formulaeq">ax+b=0</label><br><br>
+        <label for="coeficiente">Coeficiente (a):</label>
+        <input type="text" name="coeficiente" placeholder="Ingrese el coeficiente" required>
+        <label for="constante">Constante (b):</label>
+        <input type="text" name="constante" placeholder="Ingrese la constante" required>
+        <button type="submit">Resolver Ecuación Lineal</button>
+    </form>
+    <hr><br>
+<!-- Ecuación de Segundo Grado -->
+<form id="ecuacionSegundoGradoForm">
+  <label for="formulaeq">ax^2 + bx + c = 0</label><br><br>
+  <label for="coeficienteA">Coeficiente a:</label>
+  <input type="text" name="coeficienteA" placeholder="Ingrese el coeficiente a" required>
+  <label for="coeficienteB">Coeficiente b:</label>
+  <input type="text" name="coeficienteB" placeholder="Ingrese el coeficiente b" required>
+  <label for="coeficienteC">Coeficiente c:</label>
+  <input type="text" name="coeficienteC" placeholder="Ingrese el coeficiente c" required>
+  <button type="button" id="resolverEcuacionSegundoGradoBtn">Resolver Ecuación de Segundo Grado</button>
+</form>
+<hr><br>
+<!-- Sistema de Dos Ecuaciones Lineales -->
+<form id="sistemaEcuacionesForm">
+  <label for="formulaeq1">ax + by = c</label><br>
+  <label for="formulaeq2">dx + ey = f</label><br><br>
+  <label for="coeficienteA1">Coeficiente a:</label>
+  <input type="text" name="coeficienteA1" placeholder="Ingrese el coeficiente a" required>
+  <label for="coeficienteB1">Coeficiente b:</label>
+  <input type="text" name="coeficienteB1" placeholder="Ingrese el coeficiente b" required>
+  <label for="constanteC1">Constante c:</label>
+  <input type="text" name="constanteC1" placeholder="Ingrese la constante c" required>
+  <br><br>
+  <label for="coeficienteD2">Coeficiente d:</label>
+  <input type="text" name="coeficienteD2" placeholder="Ingrese el coeficiente d" required>
+  <label for="coeficienteE2">Coeficiente e:</label>
+  <input type="text" name="coeficienteE2" placeholder="Ingrese el coeficiente e" required>
+  <label for="constanteF2">Constante f:</label>
+  <input type="text" name="constanteF2" placeholder="Ingrese la constante f" required>
+  <br><br>
+  <button type="button" id="resolverSistemaEcuacionesBtn">Resolver Sistema de Ecuaciones</button>
+</form>
+<hr><br>
 
+    <!-- Porcentaje de Cambio -->
+    <form name="porcentajeForm" onsubmit="calcularPorcentaje(); return false;">
+      <label for="valorInicial">Valor Inicial:</label>
+      <input type="text" name="valorInicial" placeholder="Ingrese el valor inicial" required>
+      <label for="valorFinal">Valor Final:</label>
+      <input type="text" name="valorFinal" placeholder="Ingrese el valor final" required>
+      <button type="submit">Calcular Porcentaje de Cambio</button>
+  </form>
+<br>
+</div>
   <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
