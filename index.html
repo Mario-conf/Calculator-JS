@@ -137,7 +137,6 @@
   <button type="button" id="resolverSistemaEcuacionesBtn">Resolver Sistema de Ecuaciones</button>
 </form>
 <hr><br>
-
     <!-- Porcentaje de Cambio -->
     <form name="porcentajeForm" onsubmit="calcularPorcentaje(); return false;">
       <label for="valorInicial">Valor Inicial:</label>
@@ -146,6 +145,22 @@
       <input type="text" name="valorFinal" placeholder="Ingrese el valor final" required>
       <button type="submit">Calcular Porcentaje de Cambio</button>
   </form>
+<br><hr><br>
+
+<form id="reglaDeTresForm">
+  <label for="valor1">Valor 1:</label>
+  <input type="number" id="valor1" required>
+  
+  <label for="valor2">Valor 2:</label>
+  <input type="number" id="valor2" required>
+  
+  <label for="valor3">Valor 3:</label>
+  <input type="number" id="valor3" required>
+  
+  <button type="button" onclick="calcularReglaDeTres()">Calcular Regla De Tres</button>
+</form>
+
+
 <br>
 </div>
   <script src="script.js"></script>
