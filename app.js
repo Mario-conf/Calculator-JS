@@ -214,4 +214,16 @@ function calcularAreaVolumen() {
         var porcentajeCambio = ((valorFinal - valorInicial) / valorInicial) * 100;
         alert("El porcentaje de cambio es: " + porcentajeCambio.toFixed(2) + "%");
     }
-     
+    
+    
+
+    function calcularReglaDeTres() {
+        var valor1 = parseFloat(document.getElementById('valor1').value);
+        var valor2 = parseFloat(document.getElementById('valor2').value);
+        var valor3 = parseFloat(document.getElementById('valor3').value);
+      
+        var resultado = (valor3 * valor2) / valor1;
+      
+        alert('El resultado es: ' + resultado.toFixed(2));
+      }
+        
